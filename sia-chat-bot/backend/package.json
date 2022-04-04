@@ -11,5 +11,12 @@
     "bot"
   ],
   "author": "Lindokuhle Mazibuko",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodejs": "^0.0.0",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
+    "pool": "^0.4.1"
+  }
 }

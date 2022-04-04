@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+body{
+  margin-top: 2%;
+  margin-left: 29rem;
+  /* text-align: center; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input{
+  width: 30rem;
+  padding: .3rem .6rem;
+  border-radius: 10px;
+  font-weight: bold;
+  position: sticky;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.icon-container{
+ background-color: black;
+ border-radius: 10px;
+ padding: 5px;
+ margin-left: 10px;
+ /* margin-top: 144%; */
+
+}
+.svg{
+  font-size: 45px;
   color: white;
+
+}
+button{
+  margin-left: 1rem;
+  padding: 15px;
+  cursor: pointer;
+}
+.chat-bot-message{
+  background-color: teal;
+  padding: 12px;
+  border-radius: 10px;
+  /* margin-right: 45rem; */
+  width: 25%;
+  
+}
+.user-message{
+  background-color: rgb(47, 192, 192);
+  padding: 12px;
+  border-radius: 10px;
+  margin-right: 60rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+*{
+  box-sizing: border-box;
+ 
 }
