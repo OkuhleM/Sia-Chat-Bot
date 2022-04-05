@@ -16,5 +16,9 @@ CREATE TABLE chatbot_response(
 --     last_login TIMESTAMP 
 -- );
 
-INSERT INTO chatbot_response(response_message)
-VALUES ("Hi, I'm Sia the chatbot and I am here to assist");
+CREATE TABLE solutions(
+    id serial PRIMARY KEY,
+    options TEXT NOT NULL,
+    created_on TIMESTAMP DEFAULT now()
+
+);

@@ -2,15 +2,21 @@ import React from 'react';
 import { IoSend } from "react-icons/io5";
 import './App.css';
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {updateDialogue} from './redux/action/script'
 
 const App = () => {
+
+const dispatch = useDispatch()
+
   const [inputValue, setInputValue] = useState({ message: [], response: [] })
   const [submitInputValue, setSubmitInputValue] = useState([])
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitInputValue(
-      [...submitInputValue, inputValue])
+    setSubmitInputValue([...submitInputValue, inputValue])
+    dispatch(updateDialogue())
+
   }
 
   const chatBotResponse =  ()=>{
@@ -25,8 +31,7 @@ const App = () => {
     <div className='card'>
       <h1>Sia The Chat Bot</h1>
       <div className='wrapper'>
-        <p className='chat-bot-message'>Hi, I'm Sia the chatbot, How can I assist you today?</p>
-        <p className='chat-bot-message'>Let's start by getting your name first</p>
+ 
         <div>
           <ul>{submitInputValue.map((chats, index) => {
 
