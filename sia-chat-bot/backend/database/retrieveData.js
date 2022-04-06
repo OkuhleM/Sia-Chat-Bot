@@ -1,11 +1,12 @@
 const { chatDataBase } = require('./database');
 
-const retrieveData = async () => {
+const retrieveData = async (limit,offset) => {
 try{
-const res = await chatDataBase.query("SELECT * FROM chatbot_response");
+const res = await chatDataBase.query("SELECT * FROM chatbot_response ORDER BY id ");
 console.log(res.rows);
 }catch (e){
     console.error(e)
 }
 }
-retrieveData()
+exports.module={retrieveData}
+// LIMIT $1 OFFSET $2,[limit,offset]
