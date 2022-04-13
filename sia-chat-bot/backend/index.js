@@ -1,11 +1,13 @@
 const express = require("express");
 const app = express()
 const port = 4000
+const cors = require('cors')
+
+const chatbotResponse = require("./config/chatbotResponse.json")
 const { insertData}=require('./database/insertData');
 const {retrieveData} = require("./database/retrieveData")
 app.use(express.json());
-// app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use(cors())
 app.post("/insert-data",(req,res)=>{
     const action = insertData(req.body)
     if (action.length > 0) res.send(action).status(404)
@@ -18,10 +20,12 @@ app.post("/post-message",(req,res)=>{
 })
 
 app.get("/get-message",async (req,res)=>{
-    console.log("first")
-    const{l,o}=req.body
-    const data = await retrieveData(l,o)
-    res.json(data)
+   
+       let response = chatbotResponse.chatBotResponse
+       console.log(response)
+        res.send(response)
+        
+   
 })
 app.listen(port, () => {
     console.log(`listening on port${port}`)

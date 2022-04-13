@@ -2,7 +2,7 @@ const { chatDataBase } = require('../database/database')
 
  const solutions = async () =>{
     var insertData =   process.argv.slice(2).join(" ");
-    console.log(process.argv.slice(2).join(" "))
+    console.log(process.argv)
     try{
     const res = await chatDataBase.query(
         "INSERT INTO solutions (options) VALUES ($1)",

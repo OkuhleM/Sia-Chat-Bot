@@ -1,0 +1,56 @@
+{
+    "chatBotResponse": [
+        {
+            "id": 1,
+            "subOption": "Welcome to SIA ChatBot how can I help you?"
+        },
+        {
+            "id": 2,
+            "subOption": "I can help you with the following:"
+        },
+        {
+            "id": 3,
+            "The computer is slow": {
+                "1": "shut it down and restart it",
+                "2": "Delete duplicate and junk files",
+                "3": "store data on an external disk or in your icloud storage"
+            }
+        },
+        {
+            "id": 4,
+            "the computer does not switch on": {
+                "1": "check if the power is plugged",
+                "2": "check if electricity can reach the power socket",
+                "3": "try a different power source",
+                "4": "check your monitor connection"
+            }
+        },
+        {
+            "id": 5,
+            "the internet is slow": {
+                "1": "Uninstall unused programs.",
+                "2":"Reboot",
+                "3":"Delete temporary files",
+                "4":"Upgrade your memory"
+            }
+        },
+        {
+            "id": 6,
+           "printer is not printing":{
+               "1":"Check Your Printer's Error Lights",
+               "2":"Clear the Printer Queue",
+               "3":"Solidify the Connection",
+               "4":"Ensure You Have the Right Printer"
+           }
+        },
+        {
+            "id": 7,
+         "the computer is making strange noises":{
+             "1":"clean the vent regularly",
+             "2":"clear up the disk space",
+             "3":"Perform diagnostic tests on all hardware",
+             "4":"Return BIOS settings to their default levels"
+         }
+        }
+    ]
+}
