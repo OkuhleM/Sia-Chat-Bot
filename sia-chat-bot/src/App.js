@@ -118,7 +118,8 @@ const App = () => {
           <div className='inner'>
           </div>
 
-        </div>
+      
+          </div>
       </div>
       <div className='card-container'>
 

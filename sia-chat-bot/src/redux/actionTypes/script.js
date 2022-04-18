@@ -1,2 +1,2 @@
 export const CHATBOT_RESPONSES = 'chatbotmessages'
-export const USER_MESSAGES = 'usermessages'
+export const USER_MESSAGES = ''

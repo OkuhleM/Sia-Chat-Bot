@@ -3,7 +3,7 @@ input {
   width: 89.8%;
   padding: .3rem .6rem;
   font-weight: bold;
-  border: 0rem;
+  margin-top: 4rem;
 }
 .card{
   width: 50%;
@@ -99,3 +99,5 @@ p{
 button{
   cursor: pointer;
 }
+
+
