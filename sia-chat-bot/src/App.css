@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 input {
-  width: 89.8%;
-  padding: .3rem .6rem;
-  font-weight: bold;
-  margin-top: 4rem;
+  width: 98%;
+  /* padding: 1rem 6rem; */
+  /* font-weight: bold;
+  margin-top: 4rem; */
+  border: 1px solid white;
 }
 .card{
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
- 
+
 }
 .card-container {
   display: flex;
@@ -30,7 +31,7 @@ input {
 }
 
 .wrapper {
-  border: 1px solid grey;
+  border: 1px solid white;
   border-radius: 3px;
   height: 60vh;
   overflow-y: scroll;

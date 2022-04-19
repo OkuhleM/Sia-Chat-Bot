@@ -10,7 +10,8 @@
         },
         {
             "id": 3,
-            "The computer is slow": {
+            "optionName":"The computer is slow",
+            "options": {
                 "1": "shut it down and restart it",
                 "2": "Delete duplicate and junk files",
                 "3": "store data on an external disk or in your icloud storage"
@@ -18,7 +19,8 @@
         },
         {
             "id": 4,
-            "the computer does not switch on": {
+            "optionName":"The computer does not switch on",
+            "options": {
                 "1": "check if the power is plugged",
                 "2": "check if electricity can reach the power socket",
                 "3": "try a different power source",
@@ -27,7 +29,8 @@
         },
         {
             "id": 5,
-            "the internet is slow": {
+            "optionName":"The internet is slow",
+            "options": {
                 "1": "Uninstall unused programs.",
                 "2":"Reboot",
                 "3":"Delete temporary files",
@@ -36,7 +39,8 @@
         },
         {
             "id": 6,
-           "printer is not printing":{
+            "optionName":"Printer is not printing",
+           "options":{
                "1":"Check Your Printer's Error Lights",
                "2":"Clear the Printer Queue",
                "3":"Solidify the Connection",
@@ -45,7 +49,8 @@
         },
         {
             "id": 7,
-         "the computer is making strange noises":{
+            "optionName":"The computer is making strange noises",
+         "options":{
              "1":"clean the vent regularly",
              "2":"clear up the disk space",
              "3":"Perform diagnostic tests on all hardware",
