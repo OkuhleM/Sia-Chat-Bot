@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown';
 
 const Demo = () => {
     const [inputValue, setInputValue] = useState("")
-    const [botResponse, setBotResponse] = useState({})
+    const [botResponse, setBotResponse] = useState(null)
     const [initialState, setInitialState] = useState([]);
     const dispatch = useDispatch()
 
@@ -21,7 +21,8 @@ const Demo = () => {
         e.preventDefault()
         if (inputValue) {
             setInitialState([...initialState, `me: ${inputValue}`])
-            setTimeout(() => getMessages(), 1000)
+            setTimeout(() => console.log("..."),
+            getMessages(), 1000)
         }
         dispatch(updateDialogue())
 
@@ -44,8 +45,7 @@ const Demo = () => {
                     conversation.push(user)
                     conversation.push(bot)
                     setInputValue("")
-
-                    setInitialState(
+                       setInitialState(
                         conversation
                     )
                     setBotResponse(bot)
@@ -55,6 +55,14 @@ const Demo = () => {
             console.log(e)
         }
 
+    }
+
+
+    const getValues = () =>{
+        let values;
+        console.log("hi",initialState)
+        initialState.map(dialogue=>{
+            console.log('dialogue', JSON.stringify(dialogue,null,0))})
     }
 
     const resetButton = () => {
@@ -68,9 +76,13 @@ const Demo = () => {
     }
     return (
         <div className='card'>
+            {getValues()}
             {/* {console.log('initialState', JSON.stringify(initialState))} */}
+            <div className='header'>
+            <button className="reset-button" onClick={resetButton}>RESET</button>
             <h1>SIA THE CHATBOT</h1>
-            <button onClick={resetButton}>RESET</button>
+            <button className="agent-button" onClick={resetButton}>AGENT</button>
+            </div>
             <div className='wrapper'>
                 <div id="ptags" style={{ display: "block" }}>
 
@@ -84,12 +96,12 @@ const Demo = () => {
                 </div>
                 <ul>
                     {initialState.map((chats, index) => {
-                        // console.log(JSON.stringify(chats))
+                        console.log(chats[index])
                         return (
                             <div key={index}>
                                 <div>
-
                                     <p className='bot user-message'>{<ReactMarkdown>{chats}</ReactMarkdown>}</p><br /></div>
+{/* <WaitingMessage onSend{}/> */}
 
                                 <div><p className='client user-message'>{<ReactMarkdown>{chats}</ReactMarkdown>}</p><br /></div>
                             </div>
