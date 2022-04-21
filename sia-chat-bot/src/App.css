@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
+
 input {
   width: 98%;
   height: 3.5vh;
   padding-top: 2px;
-  outline:none;
+  outline: none;
   background-color: white;
   border: 1px solid white;
   margin-bottom: 2rem;
@@ -24,14 +25,15 @@ input {
 }
 
 .user-message {
-  background-color: #006AFF;
+  /* background-color: #006AFF; */
   color: white;
-  height: 39px;
+  height: 30px;
   padding: 12px;
   border-radius: 15px;
   width: 100%;
   height: fit-content;
 }
+
 
 * {
   box-sizing: border-box;
@@ -46,6 +48,9 @@ input {
   box-sizing: border-box;
   background-color: transparent;
 
+}
+
+#ptag5{
 }
 
 .submit {
@@ -76,38 +81,85 @@ h1 {
   float: left;
   background-color: #e5e5ea;
   color: #000;
-  width: auto;
+  width: fit-content;
   margin-right: 29rem;
+  border-bottom-left-radius: 0px;
+  border-radius: 29px;
   border-bottom-left-radius: 0px;
 
 }
 
-p.bot:before {
-  left: 30px;
-  bottom: -50px;
-  border: 25px solid;
-  border-color: #333 transparent transparent #333;
+#ptags {
+  margin: 0;
 }
 
-p.bot:after {
-  left: 38px;
-  bottom: -30px;
-  border: 15px solid;
-  border-color: #fff transparent transparent #fff;
+#ptags, span {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  line-height: 1.2;
 }
 
-
-p {
-  font-style: in;
+#ptags, span::after {
+  content: '';
+  position: absolute;
+  /* top: 0;
+  right: 0; */
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: a-ltr-after 2s cubic-bezier(.77, 0, .18, 1) forwards;
+  transform: translateX(-101%);
 }
 
+#ptags, span::before {
+  content: '';
+  position: absolute;
+  /* top: 0; */
+  /* right: 0; */
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  animation: a-ltr-before 2s cubic-bezier(.77, 0, .18, 1) forwards;
+  transform: translateX(0);
+}
+
+#ptags, span::before,
+#ptags span:nth-of-type(1)::after {
+  animation-delay: 1s;
+}
+
+#ptags span:nth-of-type(2)::before,
+#ptags span:nth-of-type(2)::after {
+  animation-delay: 1.5s;
+}
+
+@keyframes a-ltr-after {gi
+  0% {
+    transform: translateX(-100%)
+  }
+
+  100% {
+    transform: translateX(100%)
+  }
+}
+
+/* @keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+} */
 .client {
   float: right;
-  background-color: #248bf5;
-  color: #fff;
-  width: auto;
-  margin: 3rem;
+  border-radius: 15rem;
+
+  background-color: rgb(12, 120, 215);
+  font-size: 19px;
+  color: white;
+  width: fit-content;
+  margin: 1rem;
   border-bottom-right-radius: 0px;
+  padding-top: 0px;
+  /* border: 1px solid black; */
 }
 
 button {
@@ -131,5 +183,5 @@ button {
   display: flex;
   background-color: #000;
   justify-content: space-around;
-
+  margin-bottom: -2rem;
 }

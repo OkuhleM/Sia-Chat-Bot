@@ -21,8 +21,7 @@ const Demo = () => {
         e.preventDefault()
         if (inputValue) {
             setInitialState([...initialState, `me: ${inputValue}`])
-            setTimeout(() => console.log("..."),
-            getMessages(), 1000)
+            setTimeout(() => getMessages(), 2000)
         }
         dispatch(updateDialogue())
 
@@ -45,7 +44,7 @@ const Demo = () => {
                     conversation.push(user)
                     conversation.push(bot)
                     setInputValue("")
-                       setInitialState(
+                    setInitialState(
                         conversation
                     )
                     setBotResponse(bot)
@@ -58,11 +57,14 @@ const Demo = () => {
     }
 
 
-    const getValues = () =>{
+    const getValues = () => {
         let values;
-        console.log("hi",initialState)
-        initialState.map(dialogue=>{
-            console.log('dialogue', JSON.stringify(dialogue,null,0))})
+        initialState.map(dialogue => {
+            console.log("hi", dialogue.replaceAll(':', '.'))
+            values = dialogue.replace(/[^\w\s]/gi, '')
+
+        })
+        return values
     }
 
     const resetButton = () => {
@@ -76,34 +78,40 @@ const Demo = () => {
     }
     return (
         <div className='card'>
-            {getValues()}
+            {/* {getValues()} */}
             {/* {console.log('initialState', JSON.stringify(initialState))} */}
             <div className='header'>
-            <button className="reset-button" onClick={resetButton}>RESET</button>
-            <h1>SIA THE CHATBOT</h1>
-            <button className="agent-button" onClick={resetButton}>AGENT</button>
+                <button className="reset-button" onClick={resetButton}>RESET</button>
+                <h1>SIA THE CHATBOT</h1>
+                <button className="agent-button" onClick={resetButton}>AGENT</button>
             </div>
             <div className='wrapper'>
-                <div id="ptags" style={{ display: "block" }}>
+                <div id="span_wrapper" style={{ display: "block" }}>
 
-                    <p className='bot user-message'> Welcome to SIA ChatBot how can I help you?</p>
-                    <p className='bot user-message'> I can help you with the following:</p>
-                    <p className='bot user-message'> 1. The computer is slow</p>
-                    <p className='bot user-message'> 2. The computer does not switch on</p>
-                    <p className='bot user-message'> 3. The internet is slow</p>
-                    <p className='bot user-message'> 4. Printer is not printing</p>
-                    <p className='bot user-message'> 5. The computer is making strange noises</p>
+                    <span className='bot user-message' id="spantag1"> Welcome to SIA ChatBot how can I help you?</span>
+                    <span className='bot user-message' id="ptag"> I can help you with the following:</span>
+                    <span className='bot user-message' id="ptag"> 1. The computer is slow</span>
+                    <span className='bot user-message' id="ptag"> 2. The computer does not switch on</span>
+                    <span className='bot user-message' id="ptag"> 3. The internet is slow</span>
+                    <span className='bot user-message' id="ptag"> 4. Printer is not printing</span>
+                    <span className='bot user-message' id="ptag"> 5. The computer is making strange noises</span>
                 </div>
                 <ul>
                     {initialState.map((chats, index) => {
-                        console.log(chats[index])
+                        console.log(chats.replaceAll(':', '.'))
+
                         return (
                             <div key={index}>
-                                <div>
-                                    <p className='bot user-message'>{<ReactMarkdown>{chats}</ReactMarkdown>}</p><br /></div>
-{/* <WaitingMessage onSend{}/> */}
+                                <div className='dialogue'>
+                                    <p className={index % 2 === 0 ? 'client user-message' : 
+                                    'bot user-message'} style={{'font-size': 'bold',  display: "flex", "flex-direction": "column"}}>
+                                        
+                                        
+                                        {<ReactMarkdown>{chats.replace(/[\\{""\\}]/gi, '')}</ReactMarkdown>}</p><br /></div>
 
-                                <div><p className='client user-message'>{<ReactMarkdown>{chats}</ReactMarkdown>}</p><br /></div>
+                                {/* <WaitingMessage onSend{}/> */}
+
+                                {/* <div><p className='client '>{<ReactMarkdown>{inputValue}</ReactMarkdown>}</p><br /></div> */}
                             </div>
 
                         )

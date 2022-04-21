@@ -1,15 +1,8 @@
 {
     "chatBotResponse": [
+      
         {
             "id": 1,
-            "subOption": "Welcome to SIA ChatBot how can I help you?"
-        },
-        {
-            "id": 2,
-            "subOption": "I can help you with the following:"
-        },
-        {
-            "id": 3,
             "optionName":"The computer is slow",
             "options": {
                 "1": "shut it down and restart it",
@@ -18,7 +11,7 @@
             }
         },
         {
-            "id": 4,
+            "id": 2,
             "optionName":"The computer does not switch on",
             "options": {
                 "1": "check if the power is plugged",
@@ -28,7 +21,7 @@
             }
         },
         {
-            "id": 5,
+            "id": 3,
             "optionName":"The internet is slow",
             "options": {
                 "1": "Uninstall unused programs.",
@@ -38,7 +31,7 @@
             }
         },
         {
-            "id": 6,
+            "id": 4,
             "optionName":"Printer is not printing",
            "options":{
                "1":"Check Your Printer's Error Lights",
@@ -48,7 +41,7 @@
            }
         },
         {
-            "id": 7,
+            "id": 5,
             "optionName":"The computer is making strange noises",
          "options":{
              "1":"clean the vent regularly",
