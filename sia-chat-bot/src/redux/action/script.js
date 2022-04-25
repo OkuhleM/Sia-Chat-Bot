@@ -1,6 +1,9 @@
-import axios from 'axios'
+import axios from 'axios';
+import {CHATBOT_MESSAGE} from '../actionTypes/script'
 
-export const updateDialogue = (getMessages)=>{
-let path = axios.get("http://localhost:4000/get-message")
-    return  (dispatch)=>dispatch({type:"USER_MESSAGES", payload:path})
+export const updateDialogue = (botDialogue)=>{
+
+console.log("hi",botDialogue)
+
+    return  (dispatch)=>dispatch({type:CHATBOT_MESSAGE, payload:botDialogue})
 }
