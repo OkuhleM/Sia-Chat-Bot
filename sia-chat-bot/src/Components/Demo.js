@@ -68,7 +68,7 @@ const Demo = () => {
                 <button className="reset-button" onClick={resetButton}>RESET</button>
                 <h1>SIA THE CHATBOT</h1>
                 <button className="agent-button" onClick={resetButton}>AGENT</button>
-            </div>
+            </div>auto
             <div className='wrapper'>
                 <div id="span_wrapper" style={{ display: "block" }}>
 
