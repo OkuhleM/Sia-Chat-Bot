@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik');
 
+.bot-message{
+  padding: 1rem;
+  
+  width: 40%;
+  text-align: start;
+}
 
-input {
+input[type=text] {
   width: 98%;
   height: 3.5vh;
   padding-top: 2px;
@@ -25,7 +31,6 @@ input {
 }
 
 .user-message {
-  /* background-color: #006AFF; */
   color: white;
   height: 30px;
   padding: 12px;
@@ -50,22 +55,18 @@ input {
 
 }
 
-
-
 .submit {
   cursor: pointer;
-  /* width: 90px; */
   height: 32px;
   padding: 2px 3px;
   font-size: 18px;
-  background-color: white;
-  /* margin-top: 1.0rem; */
+  background-color: rgba(251, 249, 249, 0.821);
 }
 
 h1 {
   text-align: center;
   font-family: "Rubik";
-  color: forestgreen;
+  color: grey;
 }
 
 .button-container {
@@ -99,50 +100,11 @@ h1 {
   line-height: 1.2;
 }
 
- span::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: white;
-  animation: a-ltr-after 2s cubic-bezier(.77, 0, .18, 1) forwards;
-  transform: translateX(-101%);
-}
-
- span::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--bg-color);
-  animation: a-ltr-before 2s cubic-bezier(.77, 0, .18, 1) forwards;
-  transform: translateX(0);
-}
-
- span::before,
-span:nth-of-type(1)::after {
-  animation-delay: 1s;
-}
-
-span:nth-of-type(2)::before,
-span:nth-of-type(2)::after {
-  animation-delay: 1.5s;
-}
-
-@keyframes a-ltr-after {
-  0% {
-    transform: translateX(-100%)
-  }
-
-  100% {
-    transform: translateX(100%)
-  }
-}
+ 
 
 .client {
   float: right;
   border-radius: 15rem;
-
   background-color: rgb(12, 120, 215);
   font-size: 19px;
   color: white;
@@ -150,24 +112,20 @@ span:nth-of-type(2)::after {
   margin: 1rem;
   border-bottom-right-radius: 0px;
   padding-top: 0px;
-  /* border: 1px solid black; */
 }
 
-button {
+button,input[type=button] {
   cursor: pointer;
 }
 
 .reset-button {
-  margin-left: -6rem;
   border-radius: .9rem;
   margin-bottom: 1rem;
 }
 
 .agent-button {
-  /* padding: 24px; */
   border-radius: .9rem;
   margin-bottom: 1rem;
-  margin-right: -6rem;
 }
 
 .header {
@@ -175,4 +133,15 @@ button {
   background-color: #000;
   justify-content: space-around;
   margin-bottom: -2rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+}
+
+input[type=button]{
+  color: #000;
+  
+}
+::placeholder {
+  color: red;
 }

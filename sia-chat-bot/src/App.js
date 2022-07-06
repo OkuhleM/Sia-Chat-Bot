@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Demo from './Components/Demo';
+import ChatBot from './Components/ChatBot';
 const App = () => {
 
 
   return (
     <div className='card'>
-      <Demo />
+      <ChatBot />
 
     </div>
   );

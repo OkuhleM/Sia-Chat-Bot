@@ -1,0 +1,81 @@
+{
+  "dataResponse": [
+    {
+      "id": "1",
+      "title": "I can't login",
+      "options": [
+        {"option":"are you trying to log in, in your account", "solutions":[
+          {"solution":"Ensure You're Using the Correct Website"},
+          {"solution":"Check Your Credentials"},
+          {"solution":"Update Your Browser"},
+          {"solution":"Disable Your Browser's Extensions such as ad blocker"}
+        ]},
+        {"option":"are you trying to log in, using another person's account", "solutions":[
+          {"solution":"does the person know that you are trying to access their account "},
+          {"solution":"If they do, ask them to check double check their credentials for you"},
+          {"solution":"Ensure you are using the correct website"},
+          {"solution":"If they don't know I'm afraid I can't assist"}
+        ]}
+      ]
+     
+    },
+    {
+      "id": "2",
+      "title": "The system is down",
+      "options": [
+        { "option": "is the system not accessible over the web" , "solutions": [
+          {"solution": "Try accessing the website in another browser"},
+          {"solution":"Disable your antivirus temporarily"},
+          {"solution":"Scan your device for malware"},
+          {"solution":"Check Internet connectivity and browser settings"}
+        ]},
+        { "option": "is the system not accessible over mobile", "solutions": [
+          {"solution": "Restart Your Device"},
+          {"solution":"Remove SIM Card and Put it Back"},
+          {"solution":"Check Network Settings"},
+          {"solution":"Update the phone system to fix software bugs"}
+        ] }
+        
+      ]
+     
+    },
+    {
+      "id": "3",
+      "title": "I have problems with Java",
+      "options":[
+        {"option":"Is Java showing an Out-of-Memory error","solutions":[
+          {"solution":"Click Start, type regedit in the Start Search box, and then select regedit.exe in the Programs list."},
+          {"solution":"Locate and then select the HKEY_LOCAL_MACHINE_SYSTEM_CurrentControlSet_Control_Session Manager_SubSystems registry subkey."},
+          {"solution":"Right-click the Windows entry, and then select Modify."},
+          {"solution":"In the Value data section of the Edit String dialog box, locate the SharedSection entry, and then increase the second value and the third value for this entry."}
+        ]},
+        {"option":"Is Java not reading Synchronization","solutions":[
+          {"solution":"Avoid Unnecessary Locks: We should use locks only for those members on which it is required. Unnecessary use of locks leads to a deadlock situation. We recommend you to use a lock-free data structure."},
+          {"solution":"Avoid Nested Locks: Another way to avoid deadlock is to avoid giving a lock to multiple threads if we have already provided a lock to one thread."},
+          {"solution":"Using Thread.join() Method: You can get a deadlock if two threads are waiting for each other to finish indefinitely using thread join."},
+          {"solution":"Use Lock Ordering: Always assign a numeric value to each lock. Before acquiring the lock with a higher numeric value, acquire the locks with a lower numeric value."}
+        ]}
+      ]
+      
+    },
+    {
+      "id": "4",
+      "title": "The computer does not switch on",
+      "options":[
+        {"option":null,"solutions":[
+          {"solution":"check if the power is plugged"},
+          {"solution":"check if electricity can reach the power socket"},
+          {"solution":"try a different power source"},
+          {"solution":"check your monitor connection"}
+        ]},
+        {"option":null,"solutions":[
+          {"solution":null},
+          {"solution":null},
+          {"solution":null},
+          {"solution":null}
+        ]}
+      ]
+      
+    }
+  ]
+}

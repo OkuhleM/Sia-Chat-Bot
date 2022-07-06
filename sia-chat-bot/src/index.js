@@ -1,21 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
 // import ReactDOM from "react-dom/client";
-import { Provider } from 'react-redux';
-import store from './redux/store/index'
+import { Provider } from "react-redux";
+import store from "./redux/store/index";
 // import rootReducer from './redux/reducers/rootReducer';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-    <Provider store={store}>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-    </Provider>
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>
   // ,document.getElementById('root')
 );
 
